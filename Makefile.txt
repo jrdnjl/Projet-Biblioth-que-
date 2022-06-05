@@ -1,0 +1,14 @@
+all: prog
+
+prog : main.o
+    gcc -o prog main.o
+
+main.o : main.c livres.h utilisateurs.h livres.txt
+    gcc -o main.o -c main.c
+
+clean :
+    rm -rf *.o
+
+
+
+   
